@@ -6,8 +6,8 @@
 #define HOOKS_PARSER_H
 
 
-class Parser {
-
+class Config {
+    Config();
 };
 
 

@@ -6,12 +6,21 @@
 #define HOOKS_CONTEXT_H
 
 
+#include <Windows.h>
+
 class Context {
+    static HHOOK hhkLowLevelKybd;
+    static HANDLE event;
+    HANDLE thread;
 public:
-    Context& getInstance();
-    void run();
-private:
+    int run();
+    int stop();
+    int reload();
+    int hide();
+    int exit();
     Context();
+private:
+    static DWORD WINAPI ThreadProc(CONST LPVOID lpParam);
 };
 
 

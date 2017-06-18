@@ -30,7 +30,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
                 next = false;
                 break;
             default:
-                //cout << p->vkCode  << endl;
+                cout << p->vkCode  << endl;
                 break;
         }
     }

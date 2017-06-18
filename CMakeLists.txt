@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp
         hooks.cpp
-        hooks.h parser.cpp parser.h context.cpp context.h)
+        hooks.h config.cpp config.h context.cpp context.h factory.cpp factory.h)
 add_executable(hooks ${SOURCE_FILES})
