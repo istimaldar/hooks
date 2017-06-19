@@ -4,11 +4,14 @@
 
 #include "context.h"
 #include "hooks.h"
+#include "config.h"
 
 HANDLE Context::event = NULL;
 HHOOK Context::hhkLowLevelKybd = 0;
 
 int Context::run() {
+    ShowWindow (GetConsoleWindow(), SW_HIDE);
+    Config::getInstance()->load();
     thread = CreateThread(NULL, 0, &ThreadProc, NULL, 0, NULL);
     return 0;
 }
